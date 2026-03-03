@@ -1162,6 +1162,7 @@ img {
   gap: 1.5rem;
 }
 
+/* YEAR BLOCK */
 .pub__year{
   background-color: var(--container-color);
   border-radius: .5rem;
@@ -1176,10 +1177,6 @@ img {
   cursor: pointer;
 }
 
-.pub__header h3{
-  font-size: var(--h3-font-size);
-}
-
 .pub__arrow{
   font-size: 1.5rem;
   color: var(--first-color);
@@ -1189,21 +1186,63 @@ img {
 .pub__list{
   margin-top: 1rem;
   display: none;
-  display: flex;
   flex-direction: column;
-  gap: .75rem;
+  gap: 1rem;
 }
 
-.pub__item{
-  font-size: var(--normal-font-size);
-  line-height: 1.4;
-}
-
-/* Open state */
 .pub__open .pub__list{
   display: flex;
 }
 
 .pub__open .pub__arrow{
   transform: rotate(-180deg);
+}
+
+/* PAPER BLOCK */
+.pub__paper{
+  border-top: 1px solid var(--input-color);
+  padding-top: .75rem;
+}
+
+.pub__paper-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.pub__paper-icon{
+  font-size: 1.2rem;
+  color: var(--first-color);
+  margin-left: 1rem;
+  transition: .3s;
+}
+
+.pub__details{
+  display: none;
+  margin-top: .75rem;
+}
+
+.pub__paper-open .pub__details{
+  display: block;
+}
+
+.pub__paper-open .pub__paper-icon{
+  transform: rotate(45deg);
+}
+
+.pub__abstract{
+  font-size: var(--small-font-size);
+  line-height: 1.5;
+  margin-bottom: .75rem;
+}
+
+.pub__links a{
+  font-size: var(--small-font-size);
+  margin-right: 1rem;
+  color: var(--first-color);
+}
+
+.pub__links a:hover{
+  color: var(--first-color-alt);
 }
