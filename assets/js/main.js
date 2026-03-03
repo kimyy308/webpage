@@ -49,20 +49,17 @@ skillsHeader.forEach((el) =>{
 })
 
 /*==================== PUBLICATION YEAR ACCORDION ====================*/
-const pubYears = document.querySelectorAll('.pub__year')
-const pubHeaders = document.querySelectorAll('.pub__header')
+const pubYears = document.querySelectorAll('.pub__year');
+const pubHeaders = document.querySelectorAll('.pub__header');
 
 pubHeaders.forEach(header => {
   header.addEventListener('click', function(){
-    const parent = this.parentNode
+    const parent = this.parentNode;
 
-    pubYears.forEach(y => y.classList.remove('pub__open'))
-
-    if(!parent.classList.contains('pub__open')){
-      parent.classList.add('pub__open')
-    }
-  })
-})
+    // 그냥 toggle만 한다
+    parent.classList.toggle('pub__open');
+  });
+});
 
 /*==================== PAPER TOGGLE ====================*/
 const pubPapers = document.querySelectorAll('.pub__paper')
@@ -190,6 +187,7 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
 
 
 
