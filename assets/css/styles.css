@@ -1204,6 +1204,14 @@ img {
   padding-top: .75rem;
 }
 
+.pub__paper-header{
+  display: grid;
+  grid-template-columns: 4fr 1fr;  
+  column-gap: 1.5rem;
+  align-items: start;
+  cursor: pointer;
+}
+
 .pub__paper-header em{
   display: block;
   text-align: right;
