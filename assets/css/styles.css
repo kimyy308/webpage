@@ -1205,9 +1205,10 @@ img {
 }
 
 .pub__paper-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1.5rem;
+  align-items: start;
   cursor: pointer;
 }
 
@@ -1245,4 +1246,35 @@ img {
 
 .pub__links a:hover{
   color: var(--first-color-alt);
+}
+
+/* ==================== PUBLICATION LAYOUT FIX ==================== */
+
+.pub__paper-header{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1.5rem;
+  align-items: start;
+  padding: .75rem 0;
+  border-top: 1px solid var(--input-color);
+}
+
+.pub__main{
+  line-height: 1.5;
+}
+
+.pub__journal{
+  text-align: right;
+  font-style: italic;
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+}
+
+.pub__details{
+  margin-top: .5rem;
+  display: none;
+}
+
+.pub__paper.open .pub__details{
+  display: block;
 }
