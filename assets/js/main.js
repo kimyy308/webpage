@@ -48,6 +48,26 @@ skillsHeader.forEach((el) =>{
 	el.addEventListener('click', toggleSkills)
 })
 
+/*==================== PUBLICATION ACCORDION ====================*/
+const pubContent = document.getElementsByClassName('pub__year')
+const pubHeader = document.querySelectorAll('.pub__header')
+
+function togglePublications(){
+    let itemClass = this.parentNode.className
+
+    for(let i = 0; i < pubContent.length; i++){
+        pubContent[i].className = 'pub__year pub__close'
+    }
+
+    if(itemClass === 'pub__year pub__close'){
+        this.parentNode.className = 'pub__year pub__open'
+    }
+}
+
+pubHeader.forEach((el) =>{
+    el.addEventListener('click', togglePublications)
+})
+
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
 	tabContents = document.querySelectorAll('[data-content]')
@@ -163,4 +183,5 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
 
