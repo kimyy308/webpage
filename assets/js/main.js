@@ -48,24 +48,31 @@ skillsHeader.forEach((el) =>{
 	el.addEventListener('click', toggleSkills)
 })
 
-/*==================== PUBLICATION ACCORDION ====================*/
-const pubContent = document.getElementsByClassName('pub__year')
-const pubHeader = document.querySelectorAll('.pub__header')
+/*==================== PUBLICATION YEAR ACCORDION ====================*/
+const pubYears = document.querySelectorAll('.pub__year')
+const pubHeaders = document.querySelectorAll('.pub__header')
 
-function togglePublications(){
-    let itemClass = this.parentNode.className
+pubHeaders.forEach(header => {
+  header.addEventListener('click', function(){
+    const parent = this.parentNode
 
-    for(let i = 0; i < pubContent.length; i++){
-        pubContent[i].className = 'pub__year pub__close'
+    pubYears.forEach(y => y.classList.remove('pub__open'))
+
+    if(!parent.classList.contains('pub__open')){
+      parent.classList.add('pub__open')
     }
+  })
+})
 
-    if(itemClass === 'pub__year pub__close'){
-        this.parentNode.className = 'pub__year pub__open'
-    }
-}
+/*==================== PAPER TOGGLE ====================*/
+const pubPapers = document.querySelectorAll('.pub__paper')
 
-pubHeader.forEach((el) =>{
-    el.addEventListener('click', togglePublications)
+pubPapers.forEach(paper => {
+  const header = paper.querySelector('.pub__paper-header')
+
+  header.addEventListener('click', function(){
+    paper.classList.toggle('pub__paper-open')
+  })
 })
 
 /*==================== QUALIFICATION TABS ====================*/
@@ -183,5 +190,6 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
 
 
