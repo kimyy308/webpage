@@ -1153,3 +1153,57 @@ img {
 	}
 
 }
+
+/*==================== PUBLICATIONS ====================*/
+
+.publications__container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pub__year{
+  background-color: var(--container-color);
+  border-radius: .5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.pub__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pub__header h3{
+  font-size: var(--h3-font-size);
+}
+
+.pub__arrow{
+  font-size: 1.5rem;
+  color: var(--first-color);
+  transition: .3s;
+}
+
+.pub__list{
+  margin-top: 1rem;
+  display: none;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.pub__item{
+  font-size: var(--normal-font-size);
+  line-height: 1.4;
+}
+
+/* Open state */
+.pub__open .pub__list{
+  display: flex;
+}
+
+.pub__open .pub__arrow{
+  transform: rotate(-180deg);
+}
