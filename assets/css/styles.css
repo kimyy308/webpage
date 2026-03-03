@@ -1206,7 +1206,7 @@ img {
 
 .pub__paper-header{
   display: grid;
-  grid-template-columns: 4fr 1fr;  
+  grid-template-columns: 1fr 240px; 
   column-gap: 1.5rem;
   align-items: start;
   cursor: pointer;
