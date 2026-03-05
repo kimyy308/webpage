@@ -1256,3 +1256,18 @@ img {
 .pub__links a:hover{
   color: var(--first-color-alt);
 }
+
+/* ===== Publication mobile fix ===== */
+
+@media screen and (max-width: 768px) {
+
+  .pub__paper-header{
+    grid-template-columns: 1fr;
+    row-gap: .3rem;
+  }
+
+  .pub__paper-header em{
+    text-align: left;
+  }
+
+}
